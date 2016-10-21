@@ -5,7 +5,7 @@ Created on Sun Sep 11 16:59:45 2016
 @author: PRABIR GHOSH
 """
 
-from PIL import Image
+import Image
 
 class Signature():
     __signature__ = None
@@ -83,13 +83,18 @@ class Signature():
         
     def saveSig(self, id):
         if(self.__signature__ != None):
-        	self.__signature__.save(id + '.sig')
+        	self.__signature__.save(id + '.jpg')
         
     def getSignature(self):
         img = self.__signature__
         if(img != None):
         	return img
-    
+    def filteration(self):
+        print('None')
+
+    def fitTest(self, sample):
+        print('None')
+
     def verify(self, signature2):
         match = 0
         total = 0
